@@ -12,6 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Using Include="System.ComponentModel"/>
+    <Using Include="System.Runtime.CompilerServices"/>
+  </ItemGroup>
+  
+  <ItemGroup>
     <None Update="logo.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
