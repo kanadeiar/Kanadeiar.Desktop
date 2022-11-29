@@ -14,6 +14,8 @@
   <ItemGroup>
     <Using Include="System.ComponentModel"/>
     <Using Include="System.Runtime.CompilerServices"/>
+    <Using Include="System.Windows.Input"/>
+    <Using Include="System.Windows"/>
   </ItemGroup>
   
   <ItemGroup>
