@@ -25,6 +25,7 @@
     <Using Include="System.Configuration"/>
     <Using Include="System.Data"/>
     <Using Include="System.Text"/>
+    <Using Include="System.Diagnostics"/>
     <Using Include="System.Windows"/>
     <Using Include="System.Windows.Controls"/>
     <Using Include="System.Windows.Data" />

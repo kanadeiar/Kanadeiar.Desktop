@@ -1,6 +1,6 @@
-namespace WpfInfra.ViewModels;
+namespace WpfUi.ViewModels;
 
-public class MainPageViewModel : KndWindowViewModel
+public class MainPageViewModel : KndViewModelBase
 {
     private IMessageService _messageService;
 

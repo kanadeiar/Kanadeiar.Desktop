@@ -1,4 +1,4 @@
-namespace WpfInfra.ViewModels;
+namespace WpfUi.ViewModels;
 
 public class MainWindowViewModel : KndWindowViewModel
 {
@@ -14,8 +14,21 @@ public class MainWindowViewModel : KndWindowViewModel
     public MainWindowViewModel(IMessageService messageService)
     {
         _messageService = messageService ?? throw new ArgumentNullException(nameof(IMessageService));
-
+        Title = "Главное окно приложения";
         Update();
+    }
+
+    private ICommand? _ShowAboutCommand;
+    /// <summary> 
+    /// Открыть приложение о программе 
+    /// </summary>
+    public ICommand ShowAboutCommand => _ShowAboutCommand ??=
+        new KndRelayCommand(OnShowAboutCommandExecuted, CanShowAboutCommandExecute);
+    private bool CanShowAboutCommandExecute(object p) => true;
+    private void OnShowAboutCommandExecuted(object p)
+    {
+        var form = new AboutWindow();
+        form.ShowDialog();
     }
 
     private void Update()

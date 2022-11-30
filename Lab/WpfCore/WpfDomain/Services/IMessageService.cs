@@ -1,4 +1,4 @@
-namespace WpfDomain.Interfaces;
+namespace WpfDomain.Services;
 
 public interface IMessageService
 {

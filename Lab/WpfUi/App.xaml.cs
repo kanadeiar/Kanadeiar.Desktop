@@ -19,6 +19,7 @@ public partial class App : Application
         services.Configure<Settings>(host.Configuration);
         services.AddSingleton<IMessageService, MessageService>();
         services.AddScoped<MainWindowViewModel>();
+        services.AddScoped<AboutWindowViewModel>();
         services.AddScoped<MainPageViewModel>();
 
     }

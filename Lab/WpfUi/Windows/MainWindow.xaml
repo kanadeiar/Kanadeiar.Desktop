@@ -14,11 +14,12 @@
             <MenuItem Header="Главное меню">
                 <MenuItem Header="Файл"/>
                 <Separator/>
-                <MenuItem Header="Выход" Command="{Binding CloseAppCommand}"/>
+                <MenuItem Header="Выход" 
+                    Command="{Binding CloseAppCommand}"/>
             </MenuItem>
             <MenuItem Header="Справка">
                 <MenuItem Header="О программе ..."
-                          />
+                    Command="{Binding ShowAboutCommand}"/>
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom">

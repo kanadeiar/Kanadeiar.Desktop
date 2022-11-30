@@ -9,4 +9,6 @@ public class ServiceLocator
         App.Services.GetRequiredService<MainWindowViewModel>();
     public MainPageViewModel MainPageViewModel =>
         App.Services.GetRequiredService<MainPageViewModel>();
+    public AboutWindowViewModel AboutWindowViewModel =>
+        App.Services.GetRequiredService<AboutWindowViewModel>();
 }
