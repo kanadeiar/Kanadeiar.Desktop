@@ -1,4 +1,6 @@
-﻿namespace WpfUi;
+﻿using Kanadeiar.Desktop.Services;
+
+namespace WpfUi;
 
 public partial class App : Application
 {
@@ -17,6 +19,7 @@ public partial class App : Application
     private static void ConfigureServices(HostBuilderContext host, IServiceCollection services)
     {
         services.Configure<Settings>(host.Configuration);
+        services.AddSingleton<IKndWindowService, KndWindowService>();
         services.AddSingleton<IMessageService, MessageService>();
         services.AddScoped<MainWindowViewModel>();
         services.AddScoped<AboutWindowViewModel>();

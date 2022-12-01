@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WpfInfra\WpfData\WpfData.csproj" />
+    <ProjectReference Include="..\WpfInfra\WpfDesktop\WpfDesktop.csproj" />
     <ProjectReference Include="..\..\Kanadeiar.Desktop\Kanadeiar.Desktop.csproj" />
   </ItemGroup>
 
