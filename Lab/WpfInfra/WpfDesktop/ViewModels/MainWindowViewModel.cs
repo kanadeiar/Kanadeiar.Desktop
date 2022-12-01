@@ -1,11 +1,9 @@
-using Kanadeiar.Desktop.Services;
-
-namespace WpfUi.ViewModels;
+namespace WpfDesktop.ViewModels;
 
 public class MainWindowViewModel : KndWindowViewModel
 {
-    private IMessageService _messageService;
-    private IKndWindowService _windowService;
+    private readonly IMessageService _messageService;
+    private readonly IWindowsLocator _windowsLocator;
 
     private string _message = string.Empty;
     public string Message
@@ -14,10 +12,10 @@ public class MainWindowViewModel : KndWindowViewModel
         set => Set(ref _message, value);
     }
 
-    public MainWindowViewModel(IMessageService messageService, IKndWindowService windowService)
+    public MainWindowViewModel(IMessageService messageService, IWindowsLocator windowsLocator)
     {
         _messageService = messageService ?? throw new ArgumentNullException(nameof(IMessageService));
-        _windowService = windowService ?? throw new ArgumentNullException(nameof(IMessageService));
+        _windowsLocator = windowsLocator ?? throw new ArgumentNullException(nameof(IWindowsLocator));
         Title = "Главное окно приложения";
         Update();
     }
@@ -31,7 +29,7 @@ public class MainWindowViewModel : KndWindowViewModel
     private bool CanShowAboutCommandExecute(object p) => true;
     private void OnShowAboutCommandExecuted(object p)
     {
-        _windowService.ShowDialog<AboutWindow>();
+        _windowsLocator.AboutWindowShowDialog();
     }
 
     private void Update()

@@ -1,4 +1,4 @@
-namespace WpfUi.ViewModels;
+namespace WpfDesktop.ViewModels;
 
 public class MainPageViewModel : KndViewModelBase
 {

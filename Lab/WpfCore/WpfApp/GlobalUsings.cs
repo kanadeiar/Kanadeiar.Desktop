@@ -1,2 +1,2 @@
 global using WpfDomain.Configs;
-global using WpfDomain.Services;
+global using WpfDomain.Abstracts;
