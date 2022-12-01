@@ -14,5 +14,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
   </ItemGroup>
-  
+
+  <ItemGroup>
+    <Using Include="Microsoft.Extensions.Options"/>
+    <Using Include="Microsoft.Extensions.Logging"/>
+  </ItemGroup>
 </Project>

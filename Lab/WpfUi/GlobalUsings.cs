@@ -4,7 +4,7 @@ global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Logging;
 global using WpfDomain.Configs;
 global using WpfApp.Services;
-//global using Kanadeiar.Desktop.Services;
+global using Kanadeiar.Desktop.Tools;
 global using WpfDesktop.ViewModels;
 global using WpfDesktop.Abstracts;
 global using WpfUi.Windows;

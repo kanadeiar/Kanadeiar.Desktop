@@ -1,4 +1,4 @@
-namespace WpfDomain.Services;
+namespace WpfDomain.Abstracts;
 
 /// <summary>
 /// Сервис сообщений

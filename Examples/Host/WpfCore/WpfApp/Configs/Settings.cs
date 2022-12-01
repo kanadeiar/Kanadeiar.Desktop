@@ -5,5 +5,8 @@ namespace WpfApp.Configs;
 /// </summary>
 public class Settings
 {
+    /// <summary>
+    /// Сообщение
+    /// </summary>
     public string Message { get; set; } = string.Empty;
 }

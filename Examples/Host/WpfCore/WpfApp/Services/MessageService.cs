@@ -12,6 +12,9 @@ public class MessageService : IMessageService
         logger.LogInformation($"Message readed from settings: '{options.Value.Message}'");
     }
 
+    /// <summary>
+    /// Получить одно сообщение
+    /// </summary>
     public string GetMessage()
     {
         return _message;

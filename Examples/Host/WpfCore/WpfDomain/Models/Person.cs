@@ -3,7 +3,7 @@ namespace WpfDomain.Models;
 /// <summary>
 /// Сотрудник
 /// </summary>
-public class Person : Base.KndModelBase
+public class Person : KndModelBase
 {
     private string _lastName = string.Empty;
     /// <summary>

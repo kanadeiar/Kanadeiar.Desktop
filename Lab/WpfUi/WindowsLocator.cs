@@ -1,5 +1,3 @@
-using Kanadeiar.Desktop.Tools;
-
 namespace WpfUi;
 
 /// <summary>
@@ -7,12 +5,9 @@ namespace WpfUi;
 /// </summary>
 public class WindowsLocator : IWindowsLocator
 {
-    // private KndWindowService _windowService;
-    // public WindowsLocator(KndWindowService windowService)
-    // {
-    //     _windowService = windowService ?? throw new ArgumentNullException(nameof(KndWindowService));
-    // }
-
+    /// <summary>
+    /// Отобразить окно о программе
+    /// </summary>
     public void AboutWindowShowDialog()
     {
         KndWindowTool.ShowDialog<AboutWindow>();

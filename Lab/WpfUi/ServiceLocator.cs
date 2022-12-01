@@ -1,5 +1,3 @@
-using WpfDesktop.ViewModels;
-
 namespace WpfUi;
 
 /// <summary>
