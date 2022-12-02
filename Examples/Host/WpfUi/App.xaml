@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:WpfUi"
              StartupUri="Windows\MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <local:ServiceLocator x:Key="Locator"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

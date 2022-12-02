@@ -11,7 +11,10 @@ public static class KndWindowTool
     public static void Show<T>(object? dataContext = null) where T : Window, new()
     {
         var window = new T();
-        window.DataContext = dataContext;
+        if (dataContext is { })
+        {
+            window.DataContext = dataContext;
+        }
         window.Show();
     }
     /// <summary>
@@ -20,7 +23,10 @@ public static class KndWindowTool
     public static void ShowDialog<T>(object? dataContext = null) where T : Window, new()
     {
         var window = new T();
-        window.DataContext = dataContext;
+        if (dataContext is { })
+        {
+            window.DataContext = dataContext;
+        }
         window.ShowDialog();
     }
 }

@@ -17,15 +17,16 @@ public class KndWindowViewModel : Base.KndViewModelBase
 
     }
 
-    private ICommand? _CloseAppCommand;
+    private ICommand? _CloseWindowCommand;
     /// <summary> 
-    /// Закрыть приложение 
+    /// Закрыть окно 
     /// </summary>
-    public ICommand CloseAppCommand => _CloseAppCommand ??=
-        new KndRelayCommand(OnCloseAppCommandExecuted, CanCloseAppCommandExecute);
-    private bool CanCloseAppCommandExecute(object p) => true;
-    private void OnCloseAppCommandExecuted(object p)
+    public ICommand CloseWindowCommand => _CloseWindowCommand ??=
+        new KndRelayCommand(OnCloseWindowCommandExecuted, CanCloseWindowCommandExecute);
+    private bool CanCloseWindowCommandExecute(object p) => true;
+    private void OnCloseWindowCommandExecuted(object p)
     {
-        Application.Current.Shutdown();
+        var w = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+        w?.Close();
     }
 }

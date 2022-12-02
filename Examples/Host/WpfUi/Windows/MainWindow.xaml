@@ -3,11 +3,48 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctrl="clr-namespace:WpfUi.Controls"
         xmlns:local="clr-namespace:WpfUi.Windows"
         mc:Ignorable="d"
-        Title="MainWindow" 
+        DataContext="{Binding MainWindowViewModel, Source={StaticResource Locator}}"
+        Title="{Binding Title}"
         Height="500" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip">
     <DockPanel>
-
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Главное меню">
+                <MenuItem Header="Файл"/>
+                <Separator/>
+                <MenuItem Header="Выход" 
+                    Command="{Binding CloseWindowCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem Header="О программе ..."
+                    Command="{Binding ShowAboutCommand}"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Панель состояния приложения"/>
+                </StackPanel>
+        </StatusBar>
+        <TabControl FontSize="14">
+            <TabItem Header="Главная" Height="40">
+                <StackPanel>
+                    <GroupBox Header="Страница" Padding="5">
+                        <Frame Source="../Views/MessagePage.xaml"></Frame>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Пользовательский контрол">
+                <StackPanel>
+                    <GroupBox Header="Пользовательский контрол" Padding="5">
+                        <StackPanel>
+                            <ctrl:MessageControl x:Name="MesControl" Message="{Binding Message}" />
+                        </StackPanel>
+                    </GroupBox>
+                    <TextBox Text="{Binding ElementName=MesControl, Path=Message, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
     </DockPanel>
 </Window>

@@ -2,7 +2,7 @@ namespace WpfDesktop.ViewModels;
 
 public class MainPageViewModel : KndViewModelBase
 {
-    private IMessageService _messageService;
+    private readonly IMessageService _messageService;
 
     private string _message = string.Empty;
     public string Message

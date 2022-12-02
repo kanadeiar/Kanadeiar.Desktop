@@ -22,4 +22,19 @@
     <ProjectReference Include="..\..\..\Kanadeiar.Desktop\Kanadeiar.Desktop.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="System.Configuration"/>
+    <Using Include="System.Data"/>
+    <Using Include="System.Text"/>
+    <Using Include="System.Diagnostics"/>
+    <Using Include="System.Windows"/>
+    <Using Include="System.Windows.Controls"/>
+    <Using Include="System.Windows.Data" />
+    <Using Include="System.Windows.Documents"/>
+    <Using Include="System.Windows.Input"/>
+    <Using Include="System.ComponentModel"/>
+    <Using Include="System.Runtime.CompilerServices"/>
+    <Using Include="System.Windows.Controls.Primitives"/>
+  </ItemGroup>
+
 </Project>

@@ -11,4 +11,8 @@
     <ProjectReference Include="..\..\WpfCore\WpfApp\WpfApp.csproj" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Using Include="System.Windows"/>
+    <Using Include="System.Diagnostics"/>
+  </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@
                 <MenuItem Header="Файл"/>
                 <Separator/>
                 <MenuItem Header="Выход" 
-                    Command="{Binding CloseAppCommand}"/>
+                    Command="{Binding CloseWindowCommand}"/>
             </MenuItem>
             <MenuItem Header="Справка">
                 <MenuItem Header="О программе ..."
