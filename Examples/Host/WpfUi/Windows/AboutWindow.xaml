@@ -43,7 +43,7 @@
             </StackPanel>
         </Grid>
         <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="100, 10" Cursor="Hand" Name="OkButton"
-            Command="{Binding CloseWindowCommand}" >
+            Command="{Binding CloseWindowCommand}">
             ОK
         </Button>
     </Grid>
