@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0-windows</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,5 +19,4 @@
     <Using Include="Microsoft.Extensions.Options"/>
     <Using Include="Microsoft.Extensions.Logging"/>
   </ItemGroup>
-
 </Project>

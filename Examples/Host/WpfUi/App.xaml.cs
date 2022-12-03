@@ -2,8 +2,8 @@
 
 public partial class App : Application
 {
-    private static IHost? __Hosting;
-    public static IHost Hosting => __Hosting
+    private static IHost? __hosting;
+    public static IHost Hosting => __hosting
         ??= CreateHostBuilder(Environment.GetCommandLineArgs()).Build();
     /// <summary> 
     /// Сервисы приложения 
@@ -22,7 +22,6 @@ public partial class App : Application
         services.AddScoped<MainWindowViewModel>();
         services.AddScoped<AboutWindowViewModel>();
         services.AddScoped<MainPageViewModel>();
-
     }
     protected override async void OnStartup(StartupEventArgs e)
     {

@@ -4,15 +4,15 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Kanadeiar.Desktop\Kanadeiar.Desktop.csproj" />
+    <ProjectReference Include="..\..\WpfCore\WpfApp\WpfApp.csproj" />
   </ItemGroup>
-
+  
   <ItemGroup>
-    <Using Include="System.ComponentModel"/>
-    <Using Include="System.Runtime.CompilerServices"/>
+    <Using Include="System.Windows"/>
+    <Using Include="System.Diagnostics"/>
   </ItemGroup>
-
 </Project>
